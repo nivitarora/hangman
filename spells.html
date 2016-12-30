@@ -1,0 +1,50 @@
+<html ng-app=spells>
+	<head>
+		<title>Hangman</title>
+		<link rel="stylesheet" type="text/css"  href="style.css"/>
+		<script data-require="angular.js@1.2.0-rc3" data-semver="1.2.0-rc3" src="http://code.angularjs.org/1.2.0-rc.3/angular.min.js"></script>
+		<script src="javascript/spellsJS.js"></script>
+	</head>
+	
+	<!-- navigation bar -->
+	<h2 align="right">
+        <a href="index.html">Home</a><br>
+        <a href="hangman.html">Hangman</a><br>
+        <a href="spells.html">Spells</a>
+    </h2>
+    <h1><strong>The Spells</strong></h1>
+	
+	<!-- initialize AngularJS app -->
+	<body ng-controller="spellsCtrl">      
+	    <table>
+	        <tr>
+	            <td align="right">Search:</td>
+	            <td><input ng-model="query[queryBy]" placeholder="search..."/></td>
+	        </tr>           
+	        <tr>
+	            <td align="right">Search By:</td>
+	            <td>
+	                <select ng-model="queryBy">
+	                    <option value="$">filter...</option>
+	                    <option value="name">name</option>
+	                    <option value="description">description</option>
+	                </select>   
+	            </td>
+	        </tr>
+	    </table>
+	    <hr>
+	    <div>
+	        <table>
+	            <tr>
+	                <th align="left">Spell Name</th>
+	                <th align="left">Spell Description</th>
+	            </tr>
+	            <br>
+	            <tr ng-repeat="emp in spellsList | filter:query">
+	                <td>{{emp.name}}</td>
+	                <td>{{emp.description}}</td>
+	            </tr>
+	        </table>
+	    </div>
+	</body>
+</html>

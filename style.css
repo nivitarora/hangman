@@ -1,0 +1,37 @@
+body {
+	background-color: #000033;
+	text-align: left;
+	font-size:12pt;
+	margin-left:15px;
+	text-align: left;
+	font-family: Ubuntu, sans-serif;
+	color: #CCFFFF;
+}
+
+h1 {
+	color: #9966FF;
+	font-size:36pt;
+	font-family: Ubuntu, sans-serif;
+	text-align: center;
+	font-weight: bold;
+}
+
+h2 {
+	color: #00CCFF;
+	font-size:20pt;
+	font-family: Ubuntu, sans-serif;
+	font-weight: bold;
+}
+
+hr {
+	color: navy;
+}
+
+th {
+	color: #00CCFF;
+}
+
+a:link {color:#00FF99; text-decoration: none}
+a:visited {color:#00FF99}
+a:hover {color:#00CC66;}
+a:active {color:#009999;}
